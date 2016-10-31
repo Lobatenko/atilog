@@ -1,0 +1,280 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#wrapper {
+    display: block;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1024px;
+}
+
+.layout {
+    display: block;
+    margin: 0 auto;
+    width: 770px;
+    height: auto;
+}
+
+.header {
+    display: block;
+    width: 100%;
+    height: auto;
+    background-color: #2d2d2d;
+}
+
+.header .nav {
+    margin: 0;
+    padding: 0;
+}
+
+.header .nav li {
+    display: inline-block;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.header .nav li:first-child {
+    padding-left: 0;
+}
+
+.header .nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+.hero {
+    display: block;
+    position: relative;
+}
+
+.portfolio {
+    position: relative;
+    background-color: #63baa9;
+    height: auto;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    margin-top: -20px;
+}
+
+.portfolio .caption {
+    display: block;
+    position: relative;
+
+}
+
+.portfolio .caption h2 {
+    color: #fff;
+    font-family: Myriad Pro, sans-serif;
+    font-size: 30px;
+    margin: 0 0 70px 0;
+}
+
+.portfolio .caption hr {
+    position: absolute;
+    background-color: #fff;
+    width: 562px;
+    height: 3px;
+    top: 9px;
+    left: 200px;
+
+}
+
+.portfolio .works {
+    margin: 0;
+    padding: 0;
+}
+
+.portfolio .works li {
+    display: inline-block;
+    background-color: #fff;
+    width: 250px;
+    height: 120px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    padding: 0;
+}
+
+.portfolio .works li:first-child {
+    width: 509px;
+    height: 246px;
+    background-color: #f7671d;
+    /*margin-left: 20px;*/
+}
+
+.portfolio .works li:nth-child(2) {
+    height: 246px;
+    float: right;
+    margin-right: 5px;
+}
+
+.portfolio .works li:nth-child(5),
+.portfolio .works li:nth-child(8),
+.portfolio .works li:nth-child(11) {
+    float: right;
+}
+
+.portfolio .works li h3 {
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.portfolio .works li h4 {
+    margin: 60px 20px 0 20px;
+    color: #f7671d;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+.portfolio .works .first {
+    margin-top: 186px;
+}
+
+.portfolio .works li p {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+    margin: 0 8px 0px 20px;
+}
+
+.portfolio .works .whitetxt {
+    color: #fff;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+
+
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+}
+
+label {
+    display: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* custom-dropdown */
+nav[role="custom-dropdown"] {
+    position: relative;
+    width: 100%;
+}
+
+/* small screens */
+@media screen and (max-width: 768px) {
+
+    nav[role="custom-dropdown"] ul {
+        display: none;
+        height: 100%;
+    }
+
+    nav[role="custom-dropdown"] label {
+        position: relative;
+        display: block;
+        width: 100%;
+        min-height: 2.25em;
+        padding: 0.15em;
+        font-size: 1.9em;
+        margin: 0;
+    }
+
+    label:after {
+        position: absolute;
+        right: .25em;
+        top: 0;
+        content: "\2261";
+        font-size: 1.8em;
+        color: #fff;
+    }
+
+    input[type=checkbox]:checked ~ label:after {
+        color: #fff;
+    }
+
+    input[type=checkbox]:checked ~ ul {
+        display: block;
+    }
+
+    input[type=checkbox]:checked ~ ul > li {
+        width: 100%;
+        opacity: .8;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    #wrapper {
+        width: 100%;
+    }
+    .header .nav li{
+        padding: 0;
+        display: inline-block;
+        text-align: center!important;
+           }
+
+    .hero {
+        width: 100%;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    @media (min-width: 768px) and (max-width: 977px) {
+        #wrapper {
+            width: 100%;
+        }
+    }
+
+
+@media (min-width: 300px) and (max-width: 768px) {
+    .layout {
+        width: 300px;
+        padding: 0 10px;
+    }
+
+    .portfolio .caption h2{
+        text-align: center;
+    }
+
+    .portfolio .caption hr{
+        width:250px;
+        left: 10px;
+        top: 35px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .portfolio .works li:first-child {
+        width: 250px;
+        height: auto;
+    }
+    .portfolio .works {
+        float: none;
+        clear: both;
+        width: 250px;
+        margin: 0 auto;
+    }
+
+    .portfolio .works li{
+        float: none;
+        margin-right: 0px!important;
+    }
+    .portfolio {
+        clear: both;
+        height: auto;
+        padding-bottom: 140px;
+    }
+}
